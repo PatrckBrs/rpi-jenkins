@@ -9,7 +9,16 @@ ARG uid=1000
 ARG gid=1000
 
 COPY foundation.list /etc/apt/sources.list.d/
-RUN apt-get update && apt-get install -y unzip lxc curl ca-certificates oracle-java8-jdk && apt-get -y autoremove && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && \
+    apt-get install -y \
+    unzip \
+    lxc \
+    curl \
+    ca-certificates \
+    oracle-java8-jdk \
+    ansible && \
+    apt-get -y autoremove && \
+    rm -rf /var/lib/apt/lists/*
 
 # Jenkins is run with user `jenkins`, uid = 1000
 # If you bind mount a volume from the host or a data container, 
