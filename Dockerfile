@@ -8,7 +8,6 @@ ARG group=jenkins
 ARG uid=1000
 ARG gid=1000
 
-COPY foundation.list /etc/apt/sources.list.d/
 RUN apt-get update && \
     apt-get install -y \
     unzip \
