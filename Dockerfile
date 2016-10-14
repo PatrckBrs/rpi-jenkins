@@ -15,7 +15,9 @@ RUN apt-get update && \
     lxc \
     curl \
     ca-certificates \
+    oracle-java7-jdk \
     oracle-java8-jdk \
+    maven \
     ansible && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
