@@ -11,6 +11,7 @@ ARG gid=1000
 RUN apt-get update && \
     apt-get install -y \
     unzip \
+    git \
     lxc \
     curl \
     ca-certificates \
